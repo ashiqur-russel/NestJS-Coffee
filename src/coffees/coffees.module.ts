@@ -1,3 +1,4 @@
+import { EventSchema } from './../events/entities/event.entity/event.entity';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Module } from '@nestjs/common';
 import { CoffeesController } from './coffees.controller';
@@ -10,6 +11,10 @@ import { Coffee, CoffeeSchema } from './entities/coffees.entity';
       {
         name: Coffee.name,
         schema: CoffeeSchema,
+      },
+      {
+        name: Event.name,
+        schema: EventSchema,
       },
     ]),
   ],
